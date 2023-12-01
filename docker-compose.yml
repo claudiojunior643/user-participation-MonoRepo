@@ -1,0 +1,14 @@
+version: '3'
+services:
+  server:
+    build: 
+      context: ./
+      dockerfile: ./docker/server/Dockerfile
+    ports:
+      - 3001:3001
+  client:
+    build: 
+      context: ./
+      dockerfile: ./docker/client/Dockerfile
+    ports:
+      - 4173:4173

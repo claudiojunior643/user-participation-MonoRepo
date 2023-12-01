@@ -1,0 +1,47 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+    "plugin:vue/vue3-essential",
+    "eslint:recommended",
+    "@vue/eslint-config-typescript"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2021
+  },
+  "ignorePatterns": [
+    "node_modules",
+    "dist",
+    "public"
+  ],
+  "plugins": [
+    "vue"
+  ],
+  "rules": {
+    // Verifica se as propriedades e métodos usados ​​em seu código existem no tipo definido.
+    "@typescript-eslint/no-unused-vars": "error",
+    // Impede o uso de qualquer como tipo.
+    "@typescript-eslint/no-explicit-any": "error",
+    // Exige que você especifique tipos para parâmetros de função.
+    "@typescript-eslint/explicit-function-return-type": "error",
+    // Exige que você especifique tipos para variáveis e membros de classe.
+    "@typescript-eslint/explicit-member-accessibility": "error",
+    "vue/script-indent": [
+      "error",
+      2,
+      {
+        "baseIndent": 1,
+        "switchCase": 1
+      }
+    ],
+    "vue/html-quotes": [
+      "error",
+      "double"
+    ],
+    "vue/sort-keys": 2
+  }
+}

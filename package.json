@@ -1,0 +1,24 @@
+{
+  "name": "user-participation",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "server": "yarn && yarn workspace @user-participation/server dev",
+    "client": "yarn && yarn workspace @user-participation/client dev",
+    "build": "yarn && yarn workspace @user-participation/server build && yarn workspace @user-participation/client build",
+    "start": "yarn && concurrently \"yarn workspace @user-participation/server start\" \"yarn workspace @user-participation/client preview\"",
+    "build:client": "yarn && yarn workspace @user-participation/client build",
+    "build:server": "yarn && yarn workspace @user-participation/server build",
+    "lint": "yarn workspace @user-participation/client lint && yarn workspace @user-participation/server lint",
+    "dev": "concurrently \"yarn server\" \"yarn client\"",
+    "test": "yarn && yarn workspace @user-participation/client test"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.1"
+  }
+}

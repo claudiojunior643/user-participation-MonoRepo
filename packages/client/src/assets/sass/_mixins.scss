@@ -1,0 +1,5 @@
+@mixin spacing($property, $value,) {
+  $factor: 6;
+
+  #{$property}: ($value * $factor) + px;
+}
